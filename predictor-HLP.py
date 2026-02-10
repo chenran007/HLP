@@ -33,19 +33,23 @@ feature_names = ["PDC","Gender","Educationlevel", "WHtR", "Drinkingstatus", "Bla
 
 # In[13]:
 
+BOOL = {"Yes":1, "No":0}
+WAIST={"Abnormal":1, "Normal":0}
+EDUCATION= {"Primary education":0, "Secondary education":1, "Tertiary education":2}
+GENDER={"Male":1, "Female":0}
 
 #Streamlit 用户界面
 st.title("Hyperlipidemia Risk Prediction")
-PDC = st.selectbox("Phlegm-dampness constitution (PDC):", options=[0, 1])
-Gender = st.selectbox("Gender:", options=[0, 1])
-Educationlevel = st.selectbox("Educationlevel:", options=[0, 1, 2])
-WHtR = st.selectbox("Waist-to-height ratio (WHtR):", options=[0, 1])
-Drinkingstatus = st.selectbox("Drinkingstatus:", options=[0, 1])
-Blandtaste = st.selectbox("Blandtaste:", options=[0,1])
-Physicalactivity = st.selectbox("Physicalactivity:", options=[0, 1])
-Anxiety = st.selectbox("Anxiety:", options=[0, 1])
-Hypertension = st.selectbox("Hypertension:", options=[0, 1])
-Diabetes = st.selectbox("Diabetes:", options=[0, 1])
+PDC = BOOL[st.selectbox("Phlegm-dampness constitution (PDC):", options=BOOL)]
+Gender = GENDER[st.selectbox("Gender:", options=GENDER)]
+Educationlevel = EDUCATION[st.selectbox("Educationlevel:", options=education)]
+WHtR = WAIST[st.selectbox("Waist-to-height ratio (WHtR):", options=WAIST)]
+Drinkingstatus = BOOL[st.selectbox("Drinkingstatus:", options=BOOL)]
+Blandtaste = BOOL[st.selectbox("Blandtaste:", options=BOOL)]
+Physicalactivity = BOOL[st.selectbox("Physicalactivity:", options=BOOL)]
+Anxiety = BOOL[st.selectbox("Anxiety:", options=BOOL)]
+Hypertension = BOOL[st.selectbox("Hypertension:", options=BOOL)]
+Diabetes = BOOL[st.selectbox("Diabetes:", options=BOOL)]
 
 
 # In[15]:

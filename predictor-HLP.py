@@ -42,7 +42,7 @@ GENDER={"Male":1, "Female":0}
 st.title("Hyperlipidemia Risk Prediction")
 PDC = BOOL[st.selectbox("Phlegm-dampness constitution (PDC):", options=BOOL)]
 Gender = GENDER[st.selectbox("Gender:", options=GENDER)]
-Educationlevel = EDUCATION[st.selectbox("Educationlevel:", options=education)]
+Educationlevel = EDUCATION[st.selectbox("Educationlevel:", options=EDUCATION)]
 WHtR = WAIST[st.selectbox("Waist-to-height ratio (WHtR):", options=WAIST)]
 Drinkingstatus = BOOL[st.selectbox("Drinkingstatus:", options=BOOL)]
 Blandtaste = BOOL[st.selectbox("Blandtaste:", options=BOOL)]
